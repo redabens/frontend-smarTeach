@@ -1,0 +1,148 @@
+.layout{
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: 7dvh 1fr 20dvh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "navbar" 
+    "chat-bubbles"
+    "chat";
+}
+.navbar{
+    grid-area: navbar;
+    width: 100dvw;
+    height: 7dvh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+.chat-bubbles{
+    grid-area: chat-bubbles;
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 73dvh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    background-color: unset;
+}
+/* parti bubbles */
+.bubbles{
+    width:100dvw;
+    height:73dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap:5px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; /* Ajoute un scrolling fluide */
+}
+.bubble{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bubble-chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+/* partie base*/
+.base{
+    grid-area: chat-bubbles;
+    width: 100dvw;
+    height: 73dvh;
+    display: grid;
+    grid-template-rows: 70px 220px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "title"
+    "image"
+    "boxes";
+}
+.title{
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes{
+    grid-area: boxes;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+.box h3{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4470d8;
+    text-align: center;
+}
+/* parti input chat*/
+.chat{
+    grid-area: chat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 20dvh;
+    padding: 2vh 10vw 2vh 10vw;
+    background-color: unset;
+}
+.ib{
+    width: calc(100dvw - 20vw);
+    height: calc(20dvh - 4vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.input-chat{
+    width: calc(100dvw - 20vw - 40px);
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: unset;
+    text-align: left; /* Texte aligné à gauche */
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    resize: none; /* Empêche le redimensionnement de la zone de texte */
+}
+.send-button{
+    border: none;
+    outline: none;
+    background-color: unset;
+}
